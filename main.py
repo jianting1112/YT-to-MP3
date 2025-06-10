@@ -39,6 +39,11 @@ def handle_link(message):
 
     try:
         ydl_opts = {
+            'format': 'bestaudio/best',
+    		'outtmpl': '%(title)s.%(ext)s',
+		 	'noplaylist': True,
+   		 	'geo_bypass': True,
+            'geo_bypass_country': 'TW',
             'quiet': True,
             'skip_download': True,
         }
